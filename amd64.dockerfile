@@ -13,4 +13,4 @@
     ADD --chown=1000:1000 ./rootfs /
     RUN set -ex; chmod +x -R /usr/local/bin
 
-  USER nginx
+  USER node
