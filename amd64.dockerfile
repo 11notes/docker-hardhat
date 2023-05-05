@@ -1,15 +1,15 @@
 # :: Header
-  FROM 11notes/node:lts
+  FROM 11notes/node:stable
 
 # :: Run
   USER root
 
   # :: install
     RUN set -ex; \
-    mkdir -p /hardhat/etc; \
-    cd /hardhat; \
-    npm install --save --prefix /hardhat \
-    hardhat
+      mkdir -p /hardhat/etc; \
+      cd /hardhat; \
+      npm install --save --prefix /hardhat \
+      hardhat
 
   # :: copy root filesystem changes
     ADD --chown=1000:1000 ./rootfs /
@@ -17,8 +17,8 @@
 
   # :: docker -u 1000:1000 (no root initiative)
     RUN set -ex; \
-    chown -R node:node \
-    /hardhat
+      chown -R node:node \
+        /hardhat
 
 # :: Volumes
   VOLUME ["/hardhat/etc"]
