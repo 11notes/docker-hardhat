@@ -2,7 +2,7 @@
 Run a Hardhat Node based on Alpine Linux. Small, lightweight, secure and fast 🏔️
 
 ## Volumes
-* **/hardhatetc** - Directory of default.js configuration
+* **/hardhat/etc** - Directory of default.js configuration
 
 ## Run
 ```shell
