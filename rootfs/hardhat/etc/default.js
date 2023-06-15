@@ -2,7 +2,7 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: "https://eth.web3.anon.global",
+        url: "",
       },
       mining: {
         auto: true,
